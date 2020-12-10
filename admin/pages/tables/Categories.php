@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin| Sliders</title>
+  <title>Admin| Admins</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
 
   <!-- Theme style -->
-    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
     <link rel="stylesheet" href="../../dist/css/table.css">
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -44,11 +45,12 @@
         <!-- Brand Logo -->
         <a href="../../index.php" class="brand-link">
             <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <span class="brand-text font-weight-light">Admin</span>
         </a>
 
         <!-- Sidebar -->
         <div class="sidebar">
+
 
             <!-- Sidebar Menu -->
             <nav class="mt-2">
@@ -125,12 +127,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Sliders</h1>
+            <h1>Admins</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Sliders</li>
+              <li class="breadcrumb-item active">Admins</li>
             </ol>
           </div>
         </div>
@@ -145,8 +147,8 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">All Sliders with CRUD</h3><br>
-                  <a href="../forms/add-slider.php" class="btn btn-success">Add Slider</a>
+                <h3 class="card-title">All Admins with CRUD</h3><br>
+                  <a href="../forms/add-category.php" class="btn btn-success">Add Category</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -154,7 +156,7 @@
                   <table id="database-table">
                       <tr>
                           <th>ID</th>
-                          <th>Image</th>
+                          <th>name</th>
                           <th>Delete</th>
                       </tr>
 
@@ -165,7 +167,6 @@
                           <td><a href="#" class="btn btn-danger">Delete</a></td>
                       </tr>
                   </table>
-
 
               </div>
               <!-- /.card-body -->
@@ -182,7 +183,10 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2020 <a href="#">Erasoft</a>.</strong> All rights reserved.
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.1.0-rc
+    </div>
+    <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
@@ -197,11 +201,15 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<!--  Plugins -->
+<script src="../../plugins/jszip/jszip.min.js"></script>
+<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
 
 </body>
 </html>

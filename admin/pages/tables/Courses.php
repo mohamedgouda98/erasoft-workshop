@@ -67,6 +67,15 @@
                     </li>
 
                     <li class="nav-item">
+                        <a href="Categories.php" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Categories
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
                         <a href="Requests.php" class="nav-link">
                             <i class="nav-icon fas fa-edit"></i>
                             <p>
