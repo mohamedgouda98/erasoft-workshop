@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,20 +20,32 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
+
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <?php
+                                    if(!empty($_SESSION['error'])) {
+                                        ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <?php echo $_SESSION['error']?>
+                                        </div>
+                                        <?php
+                                        session_unset($_SESSION['error']);
+                                    }
+                                    ?>
+
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">تسجيل الدخول</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form method="post" action="../backend/auth.php">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">البريد الالكترونى</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" />
+                                                <input name="email" class="form-control py-4" id="inputEmailAddress" type="email" />
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputPassword">الرقم السرى</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" />
+                                                <input name="password" class="form-control py-4" id="inputPassword" type="password" />
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="btn btn-primary" href="index.blade.php">دخول</a>
+                                                <button type="submit" class="btn btn-primary" name="login">Login</button>
                                             </div>
                                         </form>
                                     </div>

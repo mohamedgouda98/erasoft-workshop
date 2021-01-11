@@ -35,9 +35,18 @@
                     Categories
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="../CategoryCourses.php">Action</a>
-                    <a class="dropdown-item" href="../CategoryCourses.php">Another action</a>
-                    <a class="dropdown-item" href="../CategoryCourses.php">Something else here</a>
+
+                    <?php
+
+                        include 'backend/categories.php';
+                        $categories = categories::getCategories();
+                        while ($row = $categories->fetch()){
+                    ?>
+                    <a class="dropdown-item" href="../CategoryCourses.php?category_id=<?php echo $row['id'] ?>" ><?php echo $row['name']?></a>
+                    <?php
+                        }
+                    ?>
+
                 </div>
             </li>
             <li class="nav-item">

@@ -155,16 +155,55 @@
                   <table id="database-table">
                       <tr>
                           <th>ID</th>
-                          <th>Image</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Course Name</th>
+                          <th>Accept</th>
                           <th>Delete</th>
                       </tr>
 
+                      <?php
+                        include '../../../backend/Requests.php';
+                        $requests = Requests::getRequests();
+                        $count = 0;
+                        $data = $requests->fetchAll(PDO::FETCH_ASSOC);
+//
+                        foreach($data as $row){
+
+                            $count++;
+                      ?>
 
                       <tr>
-                          <td>1</td>
-                          <td>Marie Bertrand</td>
+                          <td><?php echo $count?></td>
+                          <td><?php echo $row['name']?></td>
+                          <td><?php echo $row['email']?></td>
+                          <td><?php echo $row['phone']?></td>
+                          <td><?php echo $row['title']?></td>
+
+                          <?php
+                            if($row['status'] == 0){
+                            ?>
+                                <td>
+                                    <h6 style="display:none" id="accepted<?= $row['id']?>">Accepted</h6>
+                                    <button value="<?php echo $row['id']?>" class="id btn btn-primary" id="update<?= $row['id']?>">Accept</button>
+                                </td>
+                            <?php
+                            }else{
+                                ?>
+                                <td>
+                                    <h6>Accepted</h6>
+                                </td>
+
+                                <?php
+                            }
+
+                          ?>
                           <td><a href="#" class="btn btn-danger">Delete</a></td>
                       </tr>
+                      <?php
+                        }
+                        ?>
                   </table>
 
               </div>
@@ -203,6 +242,28 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+
+
+<script>
+
+    $(".id").click(function(){
+
+        var id = $(this).val();
+
+        $.ajax({
+            url:'../../../backend/Requests.php',
+            data: {'id':id},
+            type: 'POST',
+            success: function (){
+                $("#update" + id).css('display', 'none');
+                $("#accepted" + id).css('display', 'block');
+            }
+        })
+
+    });
+
+
+</script>
 
 </body>
 </html>

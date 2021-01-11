@@ -7,15 +7,30 @@
 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="images/img1.jpg" class="d-block w-100" alt="..." height="500px">
-        </div>
-        <div class="carousel-item">
-            <img src="images/img2.jpg" class="d-block w-100" alt="..." height="500px">
-        </div>
-        <div class="carousel-item">
-            <img src="images/img1.jpg" class="d-block w-100" alt="..." height="500px">
-        </div>
+
+        <?php
+        include "backend/Sliders.php";
+        $sliders = Sliders::getSliders();
+        $imagePath = 'admin/pages/upload/';
+        $count = 0;
+        while ($row = $sliders->fetch()){
+
+            if($count == 0){
+                $count++;
+            ?>
+                <div class="carousel-item active">
+                    <img src="<?php echo $imagePath . $row['image']?>" class="d-block w-100" alt="..." height="500px">
+                </div>
+            <?php
+            }else{
+                ?>
+                <div class="carousel-item">
+                <img src="<?php echo $imagePath . $row['image']?>" class="d-block w-100" alt="..." height="500px">
+                </div>
+            <?php
+            }
+        }
+        ?>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -35,59 +50,31 @@
         <h3> New Courses </h3>
 
         <div class="row">
+
+
+
+            <?php
+            include "backend/UserHome.php";
+            $newCourses = UserHome::newCourses();
+            while ($row = $newCourses->fetch()){
+            ?>
+
             <div class="course col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="images/img2.jpg" class="card-img-top" alt="...">
+                    <img src="<?php echo $imagePath . $row['image']?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title"><?php echo $row['title']?></h5>
+                        <p class="card-text"><?php echo substr($row['body'], 0 , 50)?></p>
                     </div>
                     <div class="card-body">
-                        <button type="button" class="btn btn-primary">See More</button>
+                        <a href="course-details.php?course_id=<?php echo $row['id']?>" type="button" class="btn btn-primary">See More</a>
                     </div>
                 </div>
             </div>
 
-            <div class="course col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/img2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="card-body">
-                        <button type="button" class="btn btn-primary">See More</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="course col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/img2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="card-body">
-                        <button type="button" class="btn btn-primary">See More</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="course col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/img2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="card-body">
-                        <button type="button" class="btn btn-primary">See More</button>
-                    </div>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
 
 
         </div>

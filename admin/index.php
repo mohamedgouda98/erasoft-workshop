@@ -1,5 +1,13 @@
 <?php
+  session_start();
+  ob_start();
   include 'Assets/navbar.php';
+
+
+  if(isset($_SESSION['role'])){
+
+      include "../backend/AdminHome.php";
+      $counters = AdminHome::getCounters();
 ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -30,7 +38,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3><?php echo $counters['requestsCount']?></h3>
 
                 <p>Requests</p>
               </div>
@@ -45,7 +53,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53</h3>
+                <h3><?php echo $counters['coursesCount']?></h3>
 
                 <p>Courses</p>
               </div>
@@ -73,4 +81,7 @@
 
 <?php
     include 'Assets/footer.php';
+  }else{
+      header('Location:login.php');
+  }
 ?>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,6 +149,17 @@
         <div class="row">
           <div class="col-12">
 
+              <?php
+              if(!empty($_SESSION['message'])) {
+                  ?>
+                  <div class="alert alert-success" role="alert">
+                      <?php echo $_SESSION['message']?>
+                  </div>
+                  <?php
+                  session_unset($_SESSION['message']);
+              }
+              ?>
+
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">All Admins with CRUD</h3><br>
@@ -160,12 +175,31 @@
                           <th>Delete</th>
                       </tr>
 
+                      <?php
+
+                      include "../../../backend/categories.php";
+
+                      $categories = categories::getCategories();
+                      $counter = 0;
+                        while($row = $categories->fetch()){
+                            $counter++;
+                      ?>
 
                       <tr>
-                          <td>1</td>
-                          <td>Marie Bertrand</td>
-                          <td><a href="#" class="btn btn-danger">Delete</a></td>
+                          <td><?php echo $counter?></td>
+                          <td><?php echo $row['name']?></td>
+                          <td>
+                              <form method="post" action="../../../backend/categories.php">
+                                  <input type="hidden" name="category_id" value="<?php echo $row['id']?>">
+                                  <input type="hidden" name="script">
+                                  <button type="submit" name="delete_submit" class="btn btn-danger">Delete</button>
+                              </form>
+                          </td>
                       </tr>
+
+                      <?php
+                        }
+                      ?>
                   </table>
 
               </div>

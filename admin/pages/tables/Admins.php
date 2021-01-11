@@ -138,7 +138,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">All Admins with CRUD</h3><br>
-                  <a href="" class="btn btn-success">Add Admin</a>
+                  <a href="../forms/add-admin.php" class="btn btn-success">Add Admin</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">

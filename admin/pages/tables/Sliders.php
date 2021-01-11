@@ -158,12 +158,23 @@
                           <th>Delete</th>
                       </tr>
 
+                      <?php
+                        include '../../../backend/Sliders.php';
+                        $sliders = Sliders::getSliders();
+                        $imagePath = '../upload/';
+                        while ($row = $sliders->fetch()){
+                      ?>
 
                       <tr>
                           <td>1</td>
-                          <td>Marie Bertrand</td>
+                          <td><img height="100px" width="100px" src="<?php echo $imagePath . $row['image']?>"></td>
                           <td><a href="#" class="btn btn-danger">Delete</a></td>
                       </tr>
+
+                      <?php
+                        }
+                        ?>
+
                   </table>
 
 

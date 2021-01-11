@@ -19,29 +19,44 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58aa47b6-1512-4fd0-bb3c-40d78933af9f" name="Default Changelist" comment="update frontend">
-      <change afterPath="$PROJECT_DIR$/admin/dist/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/dist/css/table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/dist/js/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/dist/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/pages/tables/Admins.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/pages/tables/Requests.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/pages/tables/Sliders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workshopProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workshopProject.iml" afterDir="false" />
+    <list default="true" id="58aa47b6-1512-4fd0-bb3c-40d78933af9f" name="Default Changelist" comment="update project">
+      <change afterPath="$PROJECT_DIR$/admin/pages/forms/add-admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/AdminHome.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/CoursesTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Requests.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Sliders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/UserHome.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/admins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/categories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/courses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/dbcont.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/Assets/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CategoryCourses.php" beforeDir="false" afterPath="$PROJECT_DIR$/CategoryCourses.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Assets/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/pages/forms/Assets/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/forms/Assets/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/pages/forms/Assets/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/forms/Assets/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/forms/add-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/forms/add-category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/forms/add-course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/forms/add-course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/forms/add-slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/forms/add-slider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/forms/update-course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/forms/update-course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/tables/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/tables/Admins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/tables/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/tables/Categories.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/pages/tables/Courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/tables/Courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/tables/Requests.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/tables/Requests.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/tables/Sliders.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/tables/Sliders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-details.php" beforeDir="false" afterPath="$PROJECT_DIR$/course-details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/admin/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -63,19 +78,21 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/dist/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/admin/dist/js" />
       <recent name="$PROJECT_DIR$/admin/dist/css" />
       <recent name="$PROJECT_DIR$/admin" />
       <recent name="$PROJECT_DIR$/admin/pages/tables" />
-      <recent name="$PROJECT_DIR$/admin/pages/forms" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -89,6 +106,12 @@
       <workItem from="1607419585235" duration="1115000" />
       <workItem from="1607549265277" duration="8788000" />
       <workItem from="1607601517525" duration="2081000" />
+      <workItem from="1608996947090" duration="816000" />
+      <workItem from="1609002678781" duration="12731000" />
+      <workItem from="1609344905980" duration="10175000" />
+      <workItem from="1609692114216" duration="9366000" />
+      <workItem from="1609949131151" duration="2450000" />
+      <workItem from="1610044393367" duration="3338000" />
     </task>
     <task id="LOCAL-00001" summary="update frontend">
       <created>1607555449836</created>
@@ -131,10 +154,18 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="240" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1607603607584" />
+    <state x="470" y="224" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609347728895">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="470" y="224" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1609347728895" />
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607557984143">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1607557984143" />
+    <state x="383" y="251" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1609347039507">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="383" y="251" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.800@0.0.1280.800" timestamp="1609347039507" />
     <state width="256" height="457" key="HiddenNamespacesPopup" timestamp="1607603329129">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -151,9 +182,24 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="351" y="141" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1280.800@0.0.1280.800" timestamp="1607555494135" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1607602988527">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1609694076509">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1607602988527" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1609694076509" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/backend/courses.php</url>
+          <line>57</line>
+          <properties>
+            <option name="className" value="\courses" />
+            <option name="methodName" value="getCourses" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
